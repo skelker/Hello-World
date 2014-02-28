@@ -9,6 +9,10 @@
 #import "SPKViewController.h"
 
 @interface SPKViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *rightNumber;
+@property (weak, nonatomic) IBOutlet UILabel *operator;
+@property (weak, nonatomic) IBOutlet UILabel *leftNumber;
+@property (weak, nonatomic) IBOutlet UILabel *answerLabel;
 
 @end
 
@@ -18,6 +22,11 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+}
+- (IBAction)showAnswerPressed:(id)sender {
+    NSLog(@"Show Answer Pressed");
+    int answer= [self.leftNumber.text intValue] + [self.rightNumber.text intValue];
+    self.answerLabel.text= [NSString stringWithFormat:@"%d",answer];
 }
 
 - (void)didReceiveMemoryWarning

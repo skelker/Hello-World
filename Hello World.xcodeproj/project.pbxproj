@@ -90,6 +90,7 @@
 				789BC3BB18823F2300A131E9 /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 1;
 		};
 		789BC3BB18823F2300A131E9 /* Products */ = {
 			isa = PBXGroup;
